@@ -11,18 +11,18 @@ const ProductsTable = memo(({ products, editProduct }) => {
         <tr>
           <th>No</th>
           <th>Name</th>
-          <th>Quality</th>
+          <th>Production date</th>
           <th>Price</th>
           <th>Type</th>
           <th className="text-end">Actions</th>
         </tr>
       </thead>
       <tbody>
-        {products.map(({ name, quality, price, type, id }, i) => (
+        {products.map(({ name, date, price, type, id }, i) => (
           <tr key={i}>
             <td>{i + 1}</td>
             <td>{name}</td>
-            <td>{quality}</td>
+            <td>{date}</td>
             <td>{price}</td>
             <td>{type}</td>
             <td className="text-end">

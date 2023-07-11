@@ -5,7 +5,7 @@ import { types } from "../data/types";
 
 const ProductForm = memo(
   ({ product, handleChange, submit, validated, selected }) => {
-    const { name, quality, price, type } = product;
+    const { name, date, price, type } = product;
     console.log("ProductForm");
     return (
       <Form noValidate onSubmit={submit} validated={validated}>
@@ -25,14 +25,14 @@ const ProductForm = memo(
           </Form.Control.Feedback>
         </FormGroup>
         <FormGroup className="mt-3">
-          <Form.Label>Quality</Form.Label>
+          <Form.Label>Production date</Form.Label>
           <Form.Control
             required
             onChange={handleChange}
-            value={quality}
-            name="quality"
-            placeholder="quality..."
-            type="text"
+            value={date}
+            name="date"
+            placeholder="date..."
+            type="date"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
